@@ -41,8 +41,8 @@ function IndustriesPage() {
               </span>
             </h1>
             <p className="mt-5 text-white/80">
-              KMB works with pharmaceutical, biotechnology, distribution and
-              contract manufacturing organisations across the UK and EU.
+              KMB works with pharmaceutical, biotechnology, distribution and contract manufacturing
+              organisations across the UK and EU.
             </p>
           </div>
         </div>
@@ -71,8 +71,8 @@ function IndustriesPage() {
                       {ind.title}
                     </h3>
                     <p className="mt-2 text-sm text-[color:var(--ink-soft)]">
-                      KMB provides tailored quality, regulatory and compliance
-                      support for {ind.title.toLowerCase()}.
+                      KMB provides tailored quality, regulatory and compliance support for{" "}
+                      {ind.title.toLowerCase()}.
                     </p>
                   </div>
                 </div>
@@ -87,7 +87,11 @@ function IndustriesPage() {
           <SectionHeading
             center
             eyebrow="Subcontractor Network"
-            title={<>Coordinated delivery through <span className="grad-text">approved partners</span></>}
+            title={
+              <>
+                Coordinated delivery through <span className="grad-text">approved partners</span>
+              </>
+            }
             intro="KMB works with carefully selected and qualified subcontractors to support specialised services. These services are delivered through an approved subcontractor network where applicable."
           />
           <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -110,63 +114,57 @@ function IndustriesPage() {
 
           <Reveal delay={0.1}>
             <p className="mx-auto mt-10 max-w-2xl rounded-2xl border border-[color:var(--border)] bg-white p-5 text-center text-sm text-[color:var(--ink-soft)]">
-              KMB coordinates these services through approved subcontractors and
-              partners. KMB does not own testing laboratories or warehouses.
+              KMB coordinates these services through approved subcontractors and partners. KMB does
+              not own testing laboratories or warehouses.
             </p>
           </Reveal>
         </div>
       </section>
-<section className="relative isolate overflow-hidden py-24">
-  <div className="absolute inset-0 -z-20 grad-hero" />
+      <section className="relative isolate overflow-hidden py-24">
+        <div className="absolute inset-0 -z-20 grad-hero" />
 
-  <div
-    aria-hidden
-    className="absolute -right-40 top-10 -z-10 h-[480px] w-[480px] rounded-full bg-[color:var(--royal-purple)] opacity-30 blur-[120px] drift"
-  />
+        <div
+          aria-hidden
+          className="absolute -right-40 top-10 -z-10 h-[480px] w-[480px] rounded-full bg-[color:var(--royal-purple)] opacity-30 blur-[120px] drift"
+        />
 
-  <div className="container-x">
-    <SectionHeading
-      center
-      light
-      eyebrow="Our Partnership Network"
-      title={
-        <>
-          Our Approved{" "}
-          <span className="bg-gradient-to-r from-white to-[color:var(--light-blue)] bg-clip-text text-transparent">
-            Testing Laboratories & Warehouses
-          </span>
-        </>
-      }
-      intro="Services are delivered through our approved subcontractor network, including qualified testing laboratories, GDP-certified warehouses and temperature-controlled logistics partners."
-    />
-  </div>
-
-  {(() => {
-    const allPartners = [...PARTNER_LABS, ...PARTNER_WAREHOUSES];
-    const middle = Math.ceil(allPartners.length / 2);
-
-    const firstRow = allPartners.slice(0, middle);
-    const secondRow = allPartners.slice(middle);
-
-    return (
-      <>
-        <div className="mt-14">
-          <LogoMarquee
-            items={firstRow}
-            speed={40}
+        <div className="container-x">
+          <SectionHeading
+            center
+            light
+            eyebrow="Our Partnership Network"
+            title={
+              <>
+                Our Approved{" "}
+                <span className="bg-gradient-to-r from-white to-[color:var(--light-blue)] bg-clip-text text-transparent">
+                  Testing Laboratories & Warehouses
+                </span>
+              </>
+            }
+            intro="Services are delivered through our approved subcontractor network, including qualified testing laboratories, GDP-certified warehouses and temperature-controlled logistics partners."
           />
         </div>
 
-        <div className="mt-8">
-          <LogoMarquee
-            items={secondRow}
-            speed={50}
-          />
-        </div>
-      </>
-    );
-  })()}
-</section>
+        {(() => {
+          const allPartners = [...PARTNER_LABS, ...PARTNER_WAREHOUSES];
+          const middle = Math.ceil(allPartners.length / 2);
+
+          const firstRow = allPartners.slice(0, middle);
+          const secondRow = allPartners.slice(middle);
+
+          return (
+            <>
+              <div className="mt-14">
+                <LogoMarquee items={firstRow} speed={40} />
+              </div>
+
+              <div className="mt-8">
+                <LogoMarquee items={secondRow} speed={50} />
+              </div>
+            </>
+          );
+        })()}
+      </section>
       <section className="py-24">
         <div className="container-x">
           <div className="rounded-[2rem] grad-brand p-10 text-white shadow-elegant sm:p-14">

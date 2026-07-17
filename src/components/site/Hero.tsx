@@ -7,10 +7,7 @@ export function Hero() {
   return (
     <section className="relative isolate overflow-hidden pt-32 pb-24 sm:pt-40 sm:pb-32">
       {/* Background gradient */}
-      <div
-        aria-hidden
-        className="absolute inset-0 -z-20 grad-hero gradient-anim"
-      />
+      <div aria-hidden className="absolute inset-0 -z-20 grad-hero gradient-anim" />
       {/* Animated glow orbs */}
       <div
         aria-hidden
@@ -34,8 +31,7 @@ export function Hero() {
           backgroundImage:
             "linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)",
           backgroundSize: "56px 56px",
-          maskImage:
-            "radial-gradient(ellipse at center, black 20%, transparent 70%)",
+          maskImage: "radial-gradient(ellipse at center, black 20%, transparent 70%)",
         }}
       />
 
@@ -71,10 +67,9 @@ export function Hero() {
               transition={{ duration: 0.8, delay: 0.15 }}
               className="mt-6 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg"
             >
-              MHRA (UK) and HPRA (Ireland) authorised MIA Holder providing
-              Importation, Qualified Person (QP), Responsible Person (RP),
-              Responsible Person for Import (RPi), Quality Assurance, eQMS
-              (Scilife), Lead Auditor and Regulatory Support services.
+              MHRA (UK) and HPRA (Ireland) authorised MIA Holder providing Importation, Qualified
+              Person (QP), Responsible Person (RP), Responsible Person for Import (RPi), Quality
+              Assurance, eQMS (Scilife), Lead Auditor and Regulatory Support services.
             </motion.p>
 
             <motion.div
@@ -163,7 +158,9 @@ export function Hero() {
               <div className="text-xs font-semibold uppercase tracking-wider text-[color:var(--royal-blue)]">
                 Scilife eQMS
               </div>
-              <div className="mt-1 text-sm text-[color:var(--ink)]">Digital quality, delivered.</div>
+              <div className="mt-1 text-sm text-[color:var(--ink)]">
+                Digital quality, delivered.
+              </div>
             </motion.div>
           </motion.div>
         </div>

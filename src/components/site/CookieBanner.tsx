@@ -47,16 +47,13 @@ export default function CookieBanner() {
             <div className="flex items-center gap-2">
               <ShieldCheck className="h-5 w-5 text-green-600" />
 
-              <h3 className="text-lg font-bold text-gray-900">
-                Your Privacy Matters
-              </h3>
+              <h3 className="text-lg font-bold text-gray-900">Your Privacy Matters</h3>
             </div>
 
             <p className="mt-2 max-w-3xl text-sm leading-6 text-gray-600">
-              KM Biosciences Limited uses cookies to enhance your browsing
-              experience, analyse website traffic and improve our services.
-              By clicking <strong>Accept All</strong>, you consent to the use of
-              cookies in accordance with our{" "}
+              KM Biosciences Limited uses cookies to enhance your browsing experience, analyse
+              website traffic and improve our services. By clicking <strong>Accept All</strong>, you
+              consent to the use of cookies in accordance with our{" "}
               <a
                 href="/privacy-policy"
                 className="font-semibold text-[#163A7D] underline underline-offset-2 hover:text-[#3056D3]"
@@ -69,7 +66,8 @@ export default function CookieBanner() {
                 className="font-semibold text-[#163A7D] underline underline-offset-2 hover:text-[#3056D3]"
               >
                 Cookie Policy
-              </a>.
+              </a>
+              .
             </p>
           </div>
         </div>

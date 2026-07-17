@@ -12,7 +12,10 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "KMBiosciences — Pharmaceutical Quality & Regulatory Services (UK & Ireland)" },
-      { property: "og:title", content: "KM Biosciences — Pharmaceutical Quality & Regulatory Services (UK & Ireland)" },
+      {
+        property: "og:title",
+        content: "KM Biosciences — Pharmaceutical Quality & Regulatory Services (UK & Ireland)",
+      },
       { property: "og:url", content: "/" },
     ],
     links: [{ rel: "canonical", href: "/" }],
@@ -53,9 +56,8 @@ function HomePage() {
                 eyebrow="About KMB"
                 title={
                   <>
-                    A trusted pharmaceutical{" "}
-                    <span className="grad-text">service partner</span> for the
-                    UK &amp; EU
+                    A trusted pharmaceutical <span className="grad-text">service partner</span> for
+                    the UK &amp; EU
                   </>
                 }
                 intro="KM Biosciences Limited is a pharmaceutical service provider supporting pharmaceutical and biotechnology companies across the United Kingdom and European Union. As an MHRA (UK) and HPRA (Ireland) authorised MIA Holder, we deliver quality, regulatory and compliance services with the discipline the industry demands."
@@ -180,11 +182,7 @@ function HomePage() {
       {/* Why choose KMB — dark image section with stats */}
       <section className="relative isolate overflow-hidden py-28">
         <div className="absolute inset-0 -z-20">
-          <img
-            src={img("manufacturing")}
-            alt=""
-            className="h-full w-full object-cover"
-          />
+          <img src={img("manufacturing")} alt="" className="h-full w-full object-cover" />
           <div className="absolute inset-0 grad-hero opacity-90" />
         </div>
 
@@ -234,7 +232,8 @@ function HomePage() {
             eyebrow="Our Process"
             title={
               <>
-                A structured path to <span className="grad-text">compliance &amp; market access</span>
+                A structured path to{" "}
+                <span className="grad-text">compliance &amp; market access</span>
               </>
             }
             intro="A proven engagement model built around your regulatory needs — from first discussion through implementation, ongoing quality support and continuous improvement."
@@ -310,7 +309,7 @@ function HomePage() {
           </div>
         </div>
       </section>
-            <FAQ />
+      <FAQ />
       {/* CTA */}
       <section className="relative overflow-hidden py-24">
         <div className="container-x">
@@ -333,9 +332,8 @@ function HomePage() {
                   Bring KMB into your regulatory &amp; quality strategy.
                 </h2>
                 <p className="mt-4 max-w-xl text-white/80">
-                  From batch certification to eQMS deployment, our team is ready
-                  to support your next inspection, product launch or market
-                  expansion across the UK and EU.
+                  From batch certification to eQMS deployment, our team is ready to support your
+                  next inspection, product launch or market expansion across the UK and EU.
                 </p>
               </div>
               <div className="flex flex-col gap-3 sm:flex-row lg:justify-end">

@@ -45,8 +45,8 @@ function ContactPage() {
               </span>
             </h1>
             <p className="mt-5 text-white/80">
-              Whether you need QP batch release, an RPi for UK import or a full
-              eQMS deployment, our team responds within one business day.
+              Whether you need QP batch release, an RPi for UK import or a full eQMS deployment, our
+              team responds within one business day.
             </p>
           </div>
         </div>
@@ -94,7 +94,9 @@ function ContactPage() {
                       className="mt-2 w-full rounded-xl border border-[color:var(--border)] bg-white px-4 py-3 text-sm text-[color:var(--ink)] outline-none focus:border-[color:var(--royal-purple)]"
                       defaultValue=""
                     >
-                      <option value="" disabled>Select a service…</option>
+                      <option value="" disabled>
+                        Select a service…
+                      </option>
                       <option>Importation Services</option>
                       <option>Qualified Person (QP)</option>
                       <option>Responsible Person (RP)</option>
@@ -131,33 +133,57 @@ function ContactPage() {
           <div className="grid gap-6 self-start">
             <Reveal delay={0.05}>
               <div className="overflow-hidden rounded-3xl shadow-card">
-                <img src={img("office")} alt="Modern corporate office" loading="lazy" className="h-56 w-full object-cover" />
+                <img
+                  src={img("office")}
+                  alt="Modern corporate office"
+                  loading="lazy"
+                  className="h-56 w-full object-cover"
+                />
               </div>
             </Reveal>
 
             <Reveal delay={0.1}>
               <div className="grid gap-4 sm:grid-cols-2">
-                <OfficeCard flag="🇬🇧" city="London" country="United Kingdom" role="39 Northumberland Crescent, Feltham, London TW149SY" />
-                <OfficeCard flag="🇮🇪" city="Cork" country="Ireland" role="2 Station Road, Ballincollig, Co. Cork, P31C799" />
+                <OfficeCard
+                  flag="🇬🇧"
+                  city="London"
+                  country="United Kingdom"
+                  role="39 Northumberland Crescent, Feltham, London TW149SY"
+                />
+                <OfficeCard
+                  flag="🇮🇪"
+                  city="Cork"
+                  country="Ireland"
+                  role="2 Station Road, Ballincollig, Co. Cork, P31C799"
+                />
               </div>
             </Reveal>
 
             <Reveal delay={0.15}>
               <div className="rounded-3xl bg-[color:var(--ink)] p-7 text-white">
                 <div className="grid gap-4 text-sm">
-                  <a href="mailto:info@kmbios.com" className="flex items-center gap-3 hover:text-[color:var(--light-blue)]">
+                  <a
+                    href="mailto:info@kmbios.com"
+                    className="flex items-center gap-3 hover:text-[color:var(--light-blue)]"
+                  >
                     <span className="grid h-9 w-9 place-items-center rounded-lg bg-white/10">
                       <Mail className="h-4 w-4" />
                     </span>
                     info@kmbios.com
                   </a>
-                  <a href="tel:+447880111192" className="flex items-center gap-3 hover:text-[color:var(--light-blue)]">
+                  <a
+                    href="tel:+447880111192"
+                    className="flex items-center gap-3 hover:text-[color:var(--light-blue)]"
+                  >
                     <span className="grid h-9 w-9 place-items-center rounded-lg bg-white/10">
                       <Phone className="h-4 w-4" />
                     </span>
                     +447880111192
                   </a>
-                  <a href="https://www.linkedin.com/company/km-biosciences/" className="flex items-center gap-3 hover:text-[color:var(--light-blue)]">
+                  <a
+                    href="https://www.linkedin.com/company/km-biosciences/"
+                    className="flex items-center gap-3 hover:text-[color:var(--light-blue)]"
+                  >
                     <span className="grid h-9 w-9 place-items-center rounded-lg bg-white/10">
                       <Linkedin className="h-4 w-4" />
                     </span>
@@ -168,19 +194,19 @@ function ContactPage() {
             </Reveal>
 
             <Reveal delay={0.2}>
-  <div className="overflow-hidden rounded-3xl border border-[color:var(--border)] shadow-soft">
-    <iframe
-      title="KM Biosciences Office Location"
-      src="https://www.google.com/maps?q=Hamilton+House,+4+Mabledon+Pl,+London+WC1H+9BB,+UK&output=embed"
-      width="100%"
-      height="400"
-      style={{ border: 0 }}
-      loading="lazy"
-      allowFullScreen
-      referrerPolicy="no-referrer-when-downgrade"
-    />
-  </div>
-</Reveal>
+              <div className="overflow-hidden rounded-3xl border border-[color:var(--border)] shadow-soft">
+                <iframe
+                  title="KM Biosciences Office Location"
+                  src="https://www.google.com/maps?q=Hamilton+House,+4+Mabledon+Pl,+London+WC1H+9BB,+UK&output=embed"
+                  width="100%"
+                  height="400"
+                  style={{ border: 0 }}
+                  loading="lazy"
+                  allowFullScreen
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              </div>
+            </Reveal>
           </div>
         </div>
       </section>
@@ -189,11 +215,22 @@ function ContactPage() {
 }
 
 function Field({
-  label, name, type = "text", required,
-}: { label: string; name: string; type?: string; required?: boolean }) {
+  label,
+  name,
+  type = "text",
+  required,
+}: {
+  label: string;
+  name: string;
+  type?: string;
+  required?: boolean;
+}) {
   return (
     <div>
-      <label htmlFor={name} className="text-xs font-semibold uppercase tracking-wider text-[color:var(--ink-soft)]">
+      <label
+        htmlFor={name}
+        className="text-xs font-semibold uppercase tracking-wider text-[color:var(--ink-soft)]"
+      >
         {label}
       </label>
       <input
@@ -207,13 +244,27 @@ function Field({
   );
 }
 
-function OfficeCard({ flag, city, country, role }: { flag: string; city: string; country: string; role: string }) {
+function OfficeCard({
+  flag,
+  city,
+  country,
+  role,
+}: {
+  flag: string;
+  city: string;
+  country: string;
+  role: string;
+}) {
   return (
     <div className="rounded-2xl border border-[color:var(--border)] bg-white p-5 shadow-soft">
       <div className="flex items-center gap-3">
-        <div className="grid h-10 w-10 place-items-center rounded-xl bg-[color:var(--accent)] text-lg">{flag}</div>
+        <div className="grid h-10 w-10 place-items-center rounded-xl bg-[color:var(--accent)] text-lg">
+          {flag}
+        </div>
         <div className="min-w-0">
-          <div className="font-semibold text-[color:var(--ink)]">{city}, {country}</div>
+          <div className="font-semibold text-[color:var(--ink)]">
+            {city}, {country}
+          </div>
           <div className="text-xs text-[color:var(--ink-soft)]">{role}</div>
         </div>
       </div>

@@ -60,66 +60,74 @@
   --radius: 1rem;
 
   /* Brand */
-  --deep-purple: #432A7A;
-  --royal-purple: #6A4FB3;
-  --dark-blue: #163A7D;
-  --royal-blue: #2D63D4;
-  --light-blue: #8CCBFF;
+  --deep-purple: #432a7a;
+  --royal-purple: #6a4fb3;
+  --dark-blue: #163a7d;
+  --royal-blue: #2d63d4;
+  --light-blue: #8ccbff;
 
-  --surface: #F7F9FC;
-  --ink: #0E1530;
-  --ink-soft: #4B5573;
+  --surface: #f7f9fc;
+  --ink: #0e1530;
+  --ink-soft: #4b5573;
 
-  --background: #FFFFFF;
+  --background: #ffffff;
   --foreground: var(--ink);
-  --card: #FFFFFF;
+  --card: #ffffff;
   --card-foreground: var(--ink);
-  --popover: #FFFFFF;
+  --popover: #ffffff;
   --popover-foreground: var(--ink);
   --primary: var(--dark-blue);
-  --primary-foreground: #FFFFFF;
-  --secondary: #EEF2FB;
+  --primary-foreground: #ffffff;
+  --secondary: #eef2fb;
   --secondary-foreground: var(--ink);
-  --muted: #EEF2FB;
+  --muted: #eef2fb;
   --muted-foreground: var(--ink-soft);
-  --accent: #EDE8FA;
+  --accent: #ede8fa;
   --accent-foreground: var(--deep-purple);
   --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: #FFFFFF;
-  --border: #E3E8F3;
-  --input: #E3E8F3;
+  --destructive-foreground: #ffffff;
+  --border: #e3e8f3;
+  --input: #e3e8f3;
   --ring: var(--royal-blue);
 
-  --grad-hero: linear-gradient(135deg, #0B1E4A 0%, #163A7D 30%, #432A7A 65%, #6A4FB3 100%);
-  --grad-button: linear-gradient(135deg, #2D63D4 0%, #6A4FB3 100%);
-  --grad-brand: linear-gradient(135deg, #163A7D 0%, #432A7A 50%, #6A4FB3 100%);
-  --grad-soft: linear-gradient(180deg, #F7F9FC 0%, #EDE8FA 100%);
-  --grad-glow: radial-gradient(60% 60% at 50% 0%, rgba(140,203,255,0.35) 0%, rgba(140,203,255,0) 70%);
+  --grad-hero: linear-gradient(135deg, #0b1e4a 0%, #163a7d 30%, #432a7a 65%, #6a4fb3 100%);
+  --grad-button: linear-gradient(135deg, #2d63d4 0%, #6a4fb3 100%);
+  --grad-brand: linear-gradient(135deg, #163a7d 0%, #432a7a 50%, #6a4fb3 100%);
+  --grad-soft: linear-gradient(180deg, #f7f9fc 0%, #ede8fa 100%);
+  --grad-glow: radial-gradient(
+    60% 60% at 50% 0%,
+    rgba(140, 203, 255, 0.35) 0%,
+    rgba(140, 203, 255, 0) 70%
+  );
 }
 
 .dark {
-  --background: #0B1024;
-  --foreground: #F3F5FC;
-  --card: #131A38;
-  --card-foreground: #F3F5FC;
-  --popover: #131A38;
-  --popover-foreground: #F3F5FC;
-  --primary: #8CCBFF;
-  --primary-foreground: #0B1024;
-  --secondary: #1A2245;
-  --secondary-foreground: #F3F5FC;
-  --muted: #1A2245;
-  --muted-foreground: #A6B0D0;
-  --accent: #2A1F55;
-  --accent-foreground: #E8DEFF;
-  --border: rgba(255,255,255,0.08);
-  --input: rgba(255,255,255,0.12);
-  --ring: #8CCBFF;
+  --background: #0b1024;
+  --foreground: #f3f5fc;
+  --card: #131a38;
+  --card-foreground: #f3f5fc;
+  --popover: #131a38;
+  --popover-foreground: #f3f5fc;
+  --primary: #8ccbff;
+  --primary-foreground: #0b1024;
+  --secondary: #1a2245;
+  --secondary-foreground: #f3f5fc;
+  --muted: #1a2245;
+  --muted-foreground: #a6b0d0;
+  --accent: #2a1f55;
+  --accent-foreground: #e8deff;
+  --border: rgba(255, 255, 255, 0.08);
+  --input: rgba(255, 255, 255, 0.12);
+  --ring: #8ccbff;
 }
 
 @layer base {
-  * { border-color: var(--color-border); }
-  html { scroll-behavior: smooth; }
+  * {
+    border-color: var(--color-border);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
@@ -127,7 +135,13 @@
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
   }
-  h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.015em; }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.015em;
+  }
 }
 
 @utility container-x {
@@ -135,13 +149,23 @@
   margin-inline: auto;
   padding-inline: 1.25rem;
   max-width: 80rem;
-  @media (min-width: 768px) { padding-inline: 2rem; }
+  @media (min-width: 768px) {
+    padding-inline: 2rem;
+  }
 }
 
-@utility grad-hero { background-image: var(--grad-hero); }
-@utility grad-brand { background-image: var(--grad-brand); }
-@utility grad-button { background-image: var(--grad-button); }
-@utility grad-soft { background-image: var(--grad-soft); }
+@utility grad-hero {
+  background-image: var(--grad-hero);
+}
+@utility grad-brand {
+  background-image: var(--grad-brand);
+}
+@utility grad-button {
+  background-image: var(--grad-button);
+}
+@utility grad-soft {
+  background-image: var(--grad-soft);
+}
 @utility grad-text {
   background-image: var(--grad-brand);
   -webkit-background-clip: text;
@@ -155,31 +179,56 @@
   border: 1px solid color-mix(in oklab, white 70%, transparent);
 }
 @utility glass-dark {
-  background-color: color-mix(in oklab, #0B1024 45%, transparent);
+  background-color: color-mix(in oklab, #0b1024 45%, transparent);
   backdrop-filter: blur(20px) saturate(150%);
-  border: 1px solid rgba(255,255,255,0.12);
+  border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
-@utility shadow-elegant { box-shadow: var(--shadow-elegant); }
-@utility shadow-card { box-shadow: var(--shadow-card); }
-@utility shadow-soft { box-shadow: var(--shadow-soft); }
+@utility shadow-elegant {
+  box-shadow: var(--shadow-elegant);
+}
+@utility shadow-card {
+  box-shadow: var(--shadow-card);
+}
+@utility shadow-soft {
+  box-shadow: var(--shadow-soft);
+}
 
 @keyframes float-slow {
-  0%, 100% { transform: translate3d(0,0,0); }
-  50% { transform: translate3d(0,-14px,0); }
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -14px, 0);
+  }
 }
-@utility float-slow { animation: float-slow 8s ease-in-out infinite; }
+@utility float-slow {
+  animation: float-slow 8s ease-in-out infinite;
+}
 
 @keyframes drift {
-  0% { transform: translate3d(0,0,0) scale(1); }
-  50% { transform: translate3d(30px,-20px,0) scale(1.05); }
-  100% { transform: translate3d(0,0,0) scale(1); }
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(30px, -20px, 0) scale(1.05);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
 }
-@utility drift { animation: drift 18s ease-in-out infinite; }
+@utility drift {
+  animation: drift 18s ease-in-out infinite;
+}
 
 @keyframes shimmer-move {
-  0% { background-position: 0% 50%; }
-  100% { background-position: 200% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
 }
 @utility gradient-anim {
   background-size: 200% 200%;

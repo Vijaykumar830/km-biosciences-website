@@ -11,19 +11,18 @@ import office from "@/assets/office.jpg";
 import coldchain from "@/assets/coldchain.jpg";
 import testingLab from "@/assets/testing-lab.jpg";
 
-
 export const IMAGES: Record<string, string> = {
   "hero-lab": hero,
   "qp-batch": qpBatch,
   "rp-warehouse": rpWarehouse,
   "rpi-import": rpiImport,
   "qa-inspection": qaInspection,
-  "eqms": eqms,
-  "audit": audit,
-  "regulatory": regulatory,
-  "manufacturing": manufacturing,
-  "office": office,
-  "coldchain": coldchain,
+  eqms: eqms,
+  audit: audit,
+  regulatory: regulatory,
+  manufacturing: manufacturing,
+  office: office,
+  coldchain: coldchain,
   "testing-lab": testingLab,
 };
 

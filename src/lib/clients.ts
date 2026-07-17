@@ -5,7 +5,6 @@ import client4 from "@/assets/clients/client4.png";
 import client5 from "@/assets/clients/client5.png";
 import client6 from "@/assets/clients/client6.png";
 
-
 export const CLIENT_LOGOS = [
   { name: "Client 1", src: client1 },
   { name: "Client 2", src: client2 },
@@ -14,4 +13,3 @@ export const CLIENT_LOGOS = [
   { name: "Client 5", src: client5 },
   { name: "Client 6", src: client6 },
 ];
-

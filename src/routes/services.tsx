@@ -45,8 +45,8 @@ function ServicesPage() {
             </h1>
             <p className="mt-5 text-white/80">
               Importation, Qualified Person (QP), Responsible Person (RP), Responsible Person for
-              Import (RPi), Quality Assurance, Quality Management Systems (eQMS · Scilife),
-              Lead Auditor and Regulatory Support.
+              Import (RPi), Quality Assurance, Quality Management Systems (eQMS · Scilife), Lead
+              Auditor and Regulatory Support.
             </p>
           </div>
         </div>
@@ -71,10 +71,7 @@ function ServicesPage() {
       </section>
 
       {SERVICES.map((s, i) => (
-        <section
-          key={s.slug}
-          className={`py-24 ${i % 2 === 1 ? "bg-[color:var(--surface)]" : ""}`}
-        >
+        <section key={s.slug} className={`py-24 ${i % 2 === 1 ? "bg-[color:var(--surface)]" : ""}`}>
           <div className="container-x">
             <ServiceCard
               id={s.slug}
@@ -99,10 +96,9 @@ function ServicesPage() {
                 Subcontractor coordination
               </h3>
               <p className="mt-3 text-[color:var(--ink-soft)]">
-                Where specialised capabilities are required, services are
-                delivered through an approved subcontractor network of qualified
-                partners — including warehousing, transportation and laboratory
-                testing.
+                Where specialised capabilities are required, services are delivered through an
+                approved subcontractor network of qualified partners — including warehousing,
+                transportation and laboratory testing.
               </p>
               <Link
                 to="/industries"
@@ -127,8 +123,8 @@ function ServicesPage() {
               Speak to a Qualified Person today.
             </h2>
             <p className="mt-4 text-white/85">
-              Whether you need batch release, an RPi for UK import or a full eQMS
-              deployment, KMB is ready to support your programme.
+              Whether you need batch release, an RPi for UK import or a full eQMS deployment, KMB is
+              ready to support your programme.
             </p>
             <div className="mt-8 flex justify-center gap-3">
               <Link

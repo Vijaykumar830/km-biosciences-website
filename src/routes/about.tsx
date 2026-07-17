@@ -17,10 +17,9 @@ import {
 } from "lucide-react";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { Reveal } from "@/components/site/Reveal";
-import { LogoMarquee } from "@/components/site/LogoMarquee"
+import { LogoMarquee } from "@/components/site/LogoMarquee";
 import { img } from "@/lib/images";
-import {CLIENT_LOGOS} from "@/lib/clients";
-
+import { CLIENT_LOGOS } from "@/lib/clients";
 
 export const Route = createFileRoute("/about")({
   component: AboutPage,
@@ -83,9 +82,21 @@ const WHY_CHOOSE_KMB = [
 ];
 
 const VALUES = [
-  { icon: Target, title: "Mission", body: "To empower pharmaceutical and biotechnology companies with trusted quality, regulatory and compliance services that enable safe access to UK and EU markets." },
-  { icon: Compass, title: "Vision", body: "To be the pharmaceutical service provider of choice across the UK and EU — recognised for integrity, expertise and long-term client partnerships." },
-  { icon: Handshake, title: "Core Values", body: "Compliance-first thinking. Client-focused delivery. Scientific rigour. Transparency at every step of the engagement." },
+  {
+    icon: Target,
+    title: "Mission",
+    body: "To empower pharmaceutical and biotechnology companies with trusted quality, regulatory and compliance services that enable safe access to UK and EU markets.",
+  },
+  {
+    icon: Compass,
+    title: "Vision",
+    body: "To be the pharmaceutical service provider of choice across the UK and EU — recognised for integrity, expertise and long-term client partnerships.",
+  },
+  {
+    icon: Handshake,
+    title: "Core Values",
+    body: "Compliance-first thinking. Client-focused delivery. Scientific rigour. Transparency at every step of the engagement.",
+  },
 ];
 
 function AboutPage() {
@@ -93,7 +104,14 @@ function AboutPage() {
     <>
       <PageHero
         eyebrow="About KMB"
-        title={<>Two decades of pharmaceutical <span className="bg-gradient-to-r from-white to-[color:var(--light-blue)] bg-clip-text text-transparent">quality &amp; regulatory expertise</span></>}
+        title={
+          <>
+            Two decades of pharmaceutical{" "}
+            <span className="bg-gradient-to-r from-white to-[color:var(--light-blue)] bg-clip-text text-transparent">
+              quality &amp; regulatory expertise
+            </span>
+          </>
+        }
         intro="KM Biosciences Limited is a specialist pharmaceutical service provider supporting pharmaceutical and biotechnology companies across the United Kingdom and European Union."
         image="office"
       />
@@ -120,23 +138,26 @@ function AboutPage() {
             />
             <Reveal delay={0.1}>
               <p className="mt-6 text-[color:var(--ink-soft)]">
-                Where specialised capabilities are required — such as warehousing,
-                transportation and laboratory testing — KMB coordinates delivery
-                through an approved subcontractor network of qualified partners.
+                Where specialised capabilities are required — such as warehousing, transportation
+                and laboratory testing — KMB coordinates delivery through an approved subcontractor
+                network of qualified partners.
               </p>
             </Reveal>
           </div>
         </div>
       </section>
 
-      
       {/* Mission / Vision / Values */}
       <section className="bg-[color:var(--surface)] py-24">
         <div className="container-x">
           <SectionHeading
             center
             eyebrow="What we stand for"
-            title={<>The principles guiding <span className="grad-text">every engagement</span></>}
+            title={
+              <>
+                The principles guiding <span className="grad-text">every engagement</span>
+              </>
+            }
           />
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             {VALUES.map((v, i) => (
@@ -157,74 +178,86 @@ function AboutPage() {
       </section>
 
       {/* Why Choose KMB */}
-<section className="py-24 bg-white">
-  <div className="container-x">
-    <SectionHeading
-      center
-      eyebrow="Why Choose KMB"
-      title={
-        <>
-          Your trusted <span className="grad-text">pharmaceutical partner</span>
-        </>
-      }
-      intro="We combine industry expertise, regulatory knowledge and flexible service delivery to help pharmaceutical and biotechnology companies maintain compliance and achieve operational excellence."
-    />
+      <section className="py-24 bg-white">
+        <div className="container-x">
+          <SectionHeading
+            center
+            eyebrow="Why Choose KMB"
+            title={
+              <>
+                Your trusted <span className="grad-text">pharmaceutical partner</span>
+              </>
+            }
+            intro="We combine industry expertise, regulatory knowledge and flexible service delivery to help pharmaceutical and biotechnology companies maintain compliance and achieve operational excellence."
+          />
 
-    <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-      {WHY_CHOOSE_KMB.map((item, index) => (
-        <Reveal key={item.title} delay={index * 0.05}>
-          <div className="h-full rounded-3xl border border-slate-200 bg-white p-8 shadow-card transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-            <div className="grid h-14 w-14 place-items-center rounded-2xl grad-button text-white">
-              <item.icon className="h-6 w-6" />
-            </div>
+          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {WHY_CHOOSE_KMB.map((item, index) => (
+              <Reveal key={item.title} delay={index * 0.05}>
+                <div className="h-full rounded-3xl border border-slate-200 bg-white p-8 shadow-card transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+                  <div className="grid h-14 w-14 place-items-center rounded-2xl grad-button text-white">
+                    <item.icon className="h-6 w-6" />
+                  </div>
 
-            <h3 className="mt-5 font-display text-xl font-semibold text-[color:var(--ink)]">
-              {item.title}
-            </h3>
+                  <h3 className="mt-5 font-display text-xl font-semibold text-[color:var(--ink)]">
+                    {item.title}
+                  </h3>
 
-            <p className="mt-3 text-sm leading-7 text-[color:var(--ink-soft)]">
-              {item.body}
-            </p>
+                  <p className="mt-3 text-sm leading-7 text-[color:var(--ink-soft)]">{item.body}</p>
+                </div>
+              </Reveal>
+            ))}
           </div>
-        </Reveal>
-      ))}
-    </div>
-  </div>
-</section>
-{/* Our Valued Clients */}
-<section className="py-24 bg-[color:var(--surface)]">
-  <div className="container-x">
-    <SectionHeading
-      center
-      eyebrow="Trusted by Industry"
-      title={
-        <>
-          Our <span className="grad-text">Valued Clients</span>
-        </>
-      }
-      intro="We are proud to support pharmaceutical, biotechnology and healthcare organisations across the UK, Ireland and Europe with quality, regulatory and compliance services."
-    />
+        </div>
+      </section>
+      {/* Our Valued Clients */}
+      <section className="py-24 bg-[color:var(--surface)]">
+        <div className="container-x">
+          <SectionHeading
+            center
+            eyebrow="Trusted by Industry"
+            title={
+              <>
+                Our <span className="grad-text">Valued Clients</span>
+              </>
+            }
+            intro="We are proud to support pharmaceutical, biotechnology and healthcare organisations across the UK, Ireland and Europe with quality, regulatory and compliance services."
+          />
 
-    <div className="mt-14">
-      <LogoMarquee
-        items={CLIENT_LOGOS}
-        speed={40}
-      />
-    </div>
-  </div>
-</section>
+          <div className="mt-14">
+            <LogoMarquee items={CLIENT_LOGOS} speed={40} />
+          </div>
+        </div>
+      </section>
 
       {/* Offices */}
       <section className="py-24">
         <div className="container-x">
           <SectionHeading
             eyebrow="Where we operate"
-            title={<>Offices in the UK and Ireland, <span className="grad-text">serving the whole of Europe</span></>}
+            title={
+              <>
+                Offices in the UK and Ireland,{" "}
+                <span className="grad-text">serving the whole of Europe</span>
+              </>
+            }
           />
           <div className="mt-12 grid gap-6 md:grid-cols-2">
             {[
-              { flag: "🇬🇧", city: "London", country: "United Kingdom", role: "39 Northumberland Crescent, Feltham, London TW149SY", img: "office" },
-              { flag: "🇮🇪", city: "Cork", country: "Ireland", role: "2 Station Road, Ballincollig, Co. Cork, P31C799", img: "office" },
+              {
+                flag: "🇬🇧",
+                city: "London",
+                country: "United Kingdom",
+                role: "39 Northumberland Crescent, Feltham, London TW149SY",
+                img: "office",
+              },
+              {
+                flag: "🇮🇪",
+                city: "Cork",
+                country: "Ireland",
+                role: "2 Station Road, Ballincollig, Co. Cork, P31C799",
+                img: "office",
+              },
             ].map((o, i) => (
               <Reveal key={o.country} delay={i * 0.08}>
                 <div className="overflow-hidden rounded-3xl bg-white shadow-card">
@@ -247,7 +280,7 @@ function AboutPage() {
                       </div>
                     </div>
                     <div className="mt-5 flex items-center gap-2 text-sm text-[color:var(--ink-soft)]">
-                      <Building2 className="h-4 w-4" /> MHRA & HPRA Authorised MIA Holder 
+                      <Building2 className="h-4 w-4" /> MHRA & HPRA Authorised MIA Holder
                     </div>
                   </div>
                 </div>

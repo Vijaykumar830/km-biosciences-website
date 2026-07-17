@@ -1,9 +1,33 @@
 import {
-  BadgeCheck, Beaker, BookOpenCheck, Boxes, Building2, ClipboardCheck,
-  FileCheck2, FlaskConical, Gauge, GitBranch, Handshake, Landmark, LayoutDashboard,
-  LibraryBig, LifeBuoy, Microscope, Package, Pill, Plane, Recycle, ScrollText,
-  ShieldCheck, Snowflake, Sparkles, Stethoscope, Truck, Users,
-  Warehouse, Workflow,
+  BadgeCheck,
+  Beaker,
+  BookOpenCheck,
+  Boxes,
+  Building2,
+  ClipboardCheck,
+  FileCheck2,
+  FlaskConical,
+  Gauge,
+  GitBranch,
+  Handshake,
+  Landmark,
+  LayoutDashboard,
+  LibraryBig,
+  LifeBuoy,
+  Microscope,
+  Package,
+  Pill,
+  Plane,
+  Recycle,
+  ScrollText,
+  ShieldCheck,
+  Snowflake,
+  Sparkles,
+  Stethoscope,
+  Truck,
+  Users,
+  Warehouse,
+  Workflow,
 } from "lucide-react";
 
 export const NAV = [
@@ -164,12 +188,30 @@ export const WHY = [
 ] as const;
 
 export const PROCESS = [
-  { title: "Initial Discussion", desc: "We listen to your regulatory, quality and market access objectives." },
-  { title: "Requirement Assessment", desc: "Gap analysis against MHRA, HPRA, GMP and GDP expectations." },
-  { title: "Compliance Planning", desc: "A tailored roadmap covering QP, RP, RPi, QA, eQMS and regulatory activities." },
-  { title: "Implementation", desc: "Named professionals deliver services with full documentation and oversight." },
-  { title: "Ongoing Quality Support", desc: "Continuous oversight, inspection readiness and lifecycle management." },
-  { title: "Continuous Improvement", desc: "KPI trending, CAPA and process refinement to keep you audit-ready." },
+  {
+    title: "Initial Discussion",
+    desc: "We listen to your regulatory, quality and market access objectives.",
+  },
+  {
+    title: "Requirement Assessment",
+    desc: "Gap analysis against MHRA, HPRA, GMP and GDP expectations.",
+  },
+  {
+    title: "Compliance Planning",
+    desc: "A tailored roadmap covering QP, RP, RPi, QA, eQMS and regulatory activities.",
+  },
+  {
+    title: "Implementation",
+    desc: "Named professionals deliver services with full documentation and oversight.",
+  },
+  {
+    title: "Ongoing Quality Support",
+    desc: "Continuous oversight, inspection readiness and lifecycle management.",
+  },
+  {
+    title: "Continuous Improvement",
+    desc: "KPI trending, CAPA and process refinement to keep you audit-ready.",
+  },
 ] as const;
 
 export const SUBCONTRACTORS = [
@@ -185,8 +227,14 @@ export const SUBCONTRACTORS = [
 ] as const;
 
 export const COMPLIANCE = [
-  "MHRA", "HPRA", "UK GMP", "EU GMP", "GDP",
-  "ICH Guidelines", "Annex 16", "Annex 21",
+  "MHRA",
+  "HPRA",
+  "UK GMP",
+  "EU GMP",
+  "GDP",
+  "ICH Guidelines",
+  "Annex 16",
+  "Annex 21",
 ] as const;
 
 export const STATS = [

@@ -3,23 +3,15 @@ export type LogoItem = {
   src: string;
 };
 
-export function LogoMarquee({
-  items,
-  speed = 40,
-}: {
-  items: LogoItem[];
-  speed?: number;
-}) {
+export function LogoMarquee({ items, speed = 40 }: { items: LogoItem[]; speed?: number }) {
   const loop = [...items, ...items];
 
   return (
     <div
       className="relative overflow-hidden"
       style={{
-        maskImage:
-          "linear-gradient(90deg, transparent, black 8%, black 92%, transparent)",
-        WebkitMaskImage:
-          "linear-gradient(90deg, transparent, black 8%, black 92%, transparent)",
+        maskImage: "linear-gradient(90deg, transparent, black 8%, black 92%, transparent)",
+        WebkitMaskImage: "linear-gradient(90deg, transparent, black 8%, black 92%, transparent)",
       }}
     >
       <div

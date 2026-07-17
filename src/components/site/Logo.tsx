@@ -20,9 +20,7 @@ export function Logo({ variant = "dark" }: { variant?: "dark" | "light" }) {
         </div>
         <div
           className={`text-[7px] font-medium uppercase tracking-[0.18em] ${
-            variant === "light"
-              ? "text-white/50"
-              : "text-[color:var(--ink-soft)]"
+            variant === "light" ? "text-white/50" : "text-[color:var(--ink-soft)]"
           }`}
         >
           Quality · Regulatory · Compliance

@@ -68,13 +68,7 @@ export function Footer() {
                   className="hover:text-white transition-colors"
                 >
                   <span className="block font-semibold text-white">UK Office</span>
-                  Hamilton House,
-                  
-                  4 Mabledon Place,
-                  
-                  London WC1H 9BB,
-                  
-                  United Kingdom
+                  Hamilton House, 4 Mabledon Place, London WC1H 9BB, United Kingdom
                 </a>
               </li>
               <li className="flex items-start gap-3">
@@ -93,16 +87,8 @@ export function Footer() {
                   rel="noopener noreferrer"
                   className="hover:text-white transition-colors"
                 >
-                  <span className="block font-semibold text-white">Ireland Office</span>
-                  2 Station Road,
-                  
-                  Ballincollig,
-                  
-                  Co. Cork,
-                  
-                  P31 C799,
-                  
-                  Ireland
+                  <span className="block font-semibold text-white">Ireland Office</span>2 Station
+                  Road, Ballincollig, Co. Cork, P31 C799, Ireland
                 </a>
               </li>
               <li className="flex items-center gap-3">

@@ -88,7 +88,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { name: "author", content: "KMBiosciences Limited" },
       { property: "og:site_name", content: "KMBiosciences Limited" },
-      { property: "og:title", content: "KMBiosciences — Pharmaceutical Quality & Regulatory Services (UK & Ireland)" },
+      {
+        property: "og:title",
+        content: "KMBiosciences — Pharmaceutical Quality & Regulatory Services (UK & Ireland)",
+      },
       {
         property: "og:description",
         content:
@@ -97,10 +100,25 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "theme-color", content: "#163A7D" },
-      { name: "twitter:title", content: "KMBiosciences — Pharmaceutical Quality & Regulatory Services (UK & Ireland)" },
-      { name: "twitter:description", content: "MHRA & HPRA authorised MIA Holder providing Qualified Person, Responsible Person, RPi, QA, eQMS (Scilife), Lead Auditor and Regulatory Support services across the UK & EU." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/e4c11c64-57a0-4903-be70-4c46ea224609/id-preview-85c549dc--e0eb269c-71a1-41ba-9b2a-5beb79300ea6.lovable.app-1784211280754.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/e4c11c64-57a0-4903-be70-4c46ea224609/id-preview-85c549dc--e0eb269c-71a1-41ba-9b2a-5beb79300ea6.lovable.app-1784211280754.png" },
+      {
+        name: "twitter:title",
+        content: "KMBiosciences — Pharmaceutical Quality & Regulatory Services (UK & Ireland)",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "MHRA & HPRA authorised MIA Holder providing Qualified Person, Responsible Person, RPi, QA, eQMS (Scilife), Lead Auditor and Regulatory Support services across the UK & EU.",
+      },
+      {
+        property: "og:image",
+        content:
+          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/e4c11c64-57a0-4903-be70-4c46ea224609/id-preview-85c549dc--e0eb269c-71a1-41ba-9b2a-5beb79300ea6.lovable.app-1784211280754.png",
+      },
+      {
+        name: "twitter:image",
+        content:
+          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/e4c11c64-57a0-4903-be70-4c46ea224609/id-preview-85c549dc--e0eb269c-71a1-41ba-9b2a-5beb79300ea6.lovable.app-1784211280754.png",
+      },
     ],
     links: [
       { rel: "stylesheet", href: appCss },

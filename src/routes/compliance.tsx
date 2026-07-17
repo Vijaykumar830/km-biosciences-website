@@ -52,8 +52,8 @@ function CompliancePage() {
               </span>
             </h1>
             <p className="mt-5 text-white/80">
-              KMBiosciences operates under MHRA and HPRA authorisations and to
-              the highest UK and EU pharmaceutical standards.
+              KMBiosciences operates under MHRA and HPRA authorisations and to the highest UK and EU
+              pharmaceutical standards.
             </p>
           </div>
         </div>
@@ -64,7 +64,11 @@ function CompliancePage() {
           <SectionHeading
             center
             eyebrow="Frameworks & Standards"
-            title={<>Aligned with <span className="grad-text">the standards that matter</span></>}
+            title={
+              <>
+                Aligned with <span className="grad-text">the standards that matter</span>
+              </>
+            }
           />
           <div className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-4 lg:grid-cols-8">
             {COMPLIANCE.map((c, i) => (
@@ -85,7 +89,11 @@ function CompliancePage() {
         <div className="container-x">
           <SectionHeading
             eyebrow="Licences"
-            title={<>Our <span className="grad-text">MIA authorisations</span></>}
+            title={
+              <>
+                Our <span className="grad-text">MIA authorisations</span>
+              </>
+            }
             intro="KMB holds Manufacturer/Importer Authorisations in both the UK and Ireland — the foundation of our importation and QP services."
           />
           <div className="mt-12 grid gap-6 md:grid-cols-2">
@@ -93,7 +101,12 @@ function CompliancePage() {
               <Reveal key={l.title} delay={i * 0.06}>
                 <div className="overflow-hidden rounded-3xl bg-white shadow-card">
                   <div className="relative h-48 overflow-hidden">
-                    <img src={img("regulatory")} alt="" loading="lazy" className="h-full w-full object-cover" />
+                    <img
+                      src={img("regulatory")}
+                      alt=""
+                      loading="lazy"
+                      className="h-full w-full object-cover"
+                    />
                     <div className="absolute inset-0 grad-brand opacity-70" />
                     <div className="absolute inset-x-0 bottom-0 p-5">
                       <div className="inline-flex items-center gap-2 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-[color:var(--deep-purple)]">

@@ -43,15 +43,7 @@ export function Reveal({
   );
 }
 
-export function Stat({
-  value,
-  suffix,
-  label,
-}: {
-  value: number;
-  suffix?: string;
-  label: string;
-}) {
+export function Stat({ value, suffix, label }: { value: number; suffix?: string; label: string }) {
   return (
     <motion.div
       className="rounded-3xl bg-white/10 p-6 backdrop-blur-md"
@@ -68,9 +60,7 @@ export function Stat({
         {suffix}
       </div>
 
-      <div className="mt-2 text-sm text-white/70">
-        {label}
-      </div>
+      <div className="mt-2 text-sm text-white/70">{label}</div>
     </motion.div>
   );
 }
