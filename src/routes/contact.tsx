@@ -153,29 +153,47 @@ function ContactPage() {
                     <label className="text-xs font-semibold uppercase tracking-wider text-[color:var(--ink-soft)]">
                       Service of interest
                     </label>
-                    <select
-                      value={formData.service}
-                      onChange={(e) =>
-                        setFormData({
-                          ...formData,
-                          service: e.target.value,
-                        })
-                      }
-                    >
-                      <option value="" disabled>
-                        Select a service…
-                      </option>
-                      <option>Importation Services</option>
-                      <option>Qualified Person (QP)</option>
-                      <option>Responsible Person (RP)</option>
-                      <option>Responsible Person for Import (RPi)</option>
-                      <option>Quality Assurance</option>
-                      <option>eQMS (Scilife)</option>
-                      <option>Lead Auditor Services</option>
-                      <option>Regulatory Support</option>
-                      <option>Other Service</option>
-                    </select>
+                    <div className="relative mt-2">
+                      <select
+                        value={formData.service}
+                        onChange={(e) =>
+                          setFormData({
+                            ...formData,
+                            service: e.target.value,
+                          })
+                        }
+                        className="w-full appearance-none rounded-xl border border-[color:var(--border)] bg-white px-4 py-3 text-sm text-[color:var(--ink)] outline-none focus:border-[color:var(--royal-purple)]"
+                      >
+                        <option value="" disabled>
+                          Select a service…
+                        </option>
+                        <option>Importation Services</option>
+                        <option>Qualified Person (QP)</option>
+                        <option>Responsible Person (RP)</option>
+                        <option>Responsible Person for Import (RPi)</option>
+                        <option>Quality Assurance</option>
+                        <option>eQMS (Scilife)</option>
+                        <option>Lead Auditor Services</option>
+                        <option>Regulatory Support</option>
+                        <option>Other Service</option>
+                      </select>
+                      {/* custom dropdown arrow since appearance-none removes the native one */}
+                      <svg
+                        className="pointer-events-none absolute right-4 top-1/2 h-4 w-4 -translate-y-1/2 text-[color:var(--ink-soft)]"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                      >
+                        <path
+                          d="M5 7.5L10 12.5L15 7.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </div>
                   </div>
+
                   <div>
                     <label className="text-xs font-semibold uppercase tracking-wider text-[color:var(--ink-soft)]">
                       How can we help?
@@ -188,6 +206,8 @@ function ContactPage() {
                           message: e.target.value,
                         })
                       }
+                      rows={5}
+                      className="mt-2 w-full resize-none rounded-xl border border-[color:var(--border)] bg-white px-4 py-3 text-sm text-[color:var(--ink)] outline-none focus:border-[color:var(--royal-purple)]"
                     />
                   </div>
                   <button
