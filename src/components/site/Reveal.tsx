@@ -16,18 +16,28 @@ const variants: Variants = {
   },
 };
 
+// Cache motion components per tag so we don't call motion() on every render.
+const motionTagCache = new Map<string, ReturnType<typeof motion.div extends never ? never : typeof motion>>();
+
+function getMotionTag(tag: keyof HTMLElementTagNameMap) {
+  if (!motionTagCache.has(tag)) {
+    motionTagCache.set(tag, motion(tag as never) as never);
+  }
+  return motionTagCache.get(tag) as typeof motion.div;
+}
+
 export function Reveal({
   children,
   delay = 0,
   className,
-  as: As = "div",
+  as = "div",
 }: {
   children: ReactNode;
   delay?: number;
   className?: string;
   as?: keyof HTMLElementTagNameMap;
 }) {
-  const MotionTag = motion(As as never) as never as typeof motion.div;
+  const MotionTag = getMotionTag(as);
 
   return (
     <MotionTag
