@@ -4,6 +4,7 @@ import { Linkedin, Mail, MapPin, Phone, Send } from "lucide-react";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { Reveal } from "@/components/site/Reveal";
 import { img } from "@/lib/images";
+import emailjs from "@emailjs/browser";
 
 export const Route = createFileRoute("/contact")({
   component: ContactPage,
@@ -24,6 +25,15 @@ export const Route = createFileRoute("/contact")({
 
 function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
+
+  const [formData, setFormData] = useState({
+    name: "",
+    company: "",
+    email: "",
+    phone: "",
+    service: "",
+    message: "",
+  });
 
   return (
     <>
@@ -73,26 +83,84 @@ function ContactPage() {
               ) : (
                 <form
                   className="mt-8 grid gap-5"
-                  onSubmit={(e) => {
+                  onSubmit={async (e) => {
                     e.preventDefault();
-                    setSubmitted(true);
+                    try {
+                      await emailjs.send(
+                        "service_mbin4ut",
+                        "template_ln07m0a",
+                        {
+                          name: formData.name,
+                          company: formData.company,
+                          email: formData.email,
+                          phone: formData.phone,
+                          service: formData.service,
+                          message: formData.message,
+                        },
+                        "ELoi2L2CRIelCO_hR",
+                      );
+
+                      setSubmitted(true);
+
+                      setFormData({
+                        name: "",
+                        company: "",
+                        email: "",
+                        phone: "",
+                        service: "",
+                        message: "",
+                      });
+                    } catch (err) {
+                      alert("Failed to send message.");
+                      console.error(err);
+                    }
                   }}
                 >
                   <div className="grid gap-5 sm:grid-cols-2">
-                    <Field label="Full name" name="name" required />
-                    <Field label="Company" name="company" required />
+                    <Field
+                      label="Full name"
+                      name="name"
+                      required
+                      value={formData.name}
+                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    />
+                    <Field
+                      label="Company"
+                      name="company"
+                      required
+                      value={formData.company}
+                      onChange={(e) => setFormData({ ...formData, company: e.target.value })}
+                    />
                   </div>
                   <div className="grid gap-5 sm:grid-cols-2">
-                    <Field label="Work email" name="email" type="email" required />
-                    <Field label="Phone" name="phone" type="tel" />
+                    <Field
+                      label="Email"
+                      name="email"
+                      type="email"
+                      required
+                      value={formData.email}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    />
+                    <Field
+                      label="Phone"
+                      name="phone"
+                      type="tel"
+                      value={formData.phone}
+                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                    />
                   </div>
                   <div>
                     <label className="text-xs font-semibold uppercase tracking-wider text-[color:var(--ink-soft)]">
                       Service of interest
                     </label>
                     <select
-                      className="mt-2 w-full rounded-xl border border-[color:var(--border)] bg-white px-4 py-3 text-sm text-[color:var(--ink)] outline-none focus:border-[color:var(--royal-purple)]"
-                      defaultValue=""
+                      value={formData.service}
+                      onChange={(e) =>
+                        setFormData({
+                          ...formData,
+                          service: e.target.value,
+                        })
+                      }
                     >
                       <option value="" disabled>
                         Select a service…
@@ -113,9 +181,13 @@ function ContactPage() {
                       How can we help?
                     </label>
                     <textarea
-                      rows={5}
-                      required
-                      className="mt-2 w-full resize-none rounded-xl border border-[color:var(--border)] bg-white px-4 py-3 text-sm text-[color:var(--ink)] outline-none focus:border-[color:var(--royal-purple)]"
+                      value={formData.message}
+                      onChange={(e) =>
+                        setFormData({
+                          ...formData,
+                          message: e.target.value,
+                        })
+                      }
                     />
                   </div>
                   <button
@@ -219,11 +291,15 @@ function Field({
   name,
   type = "text",
   required,
+  value,
+  onChange,
 }: {
   label: string;
   name: string;
   type?: string;
   required?: boolean;
+  value: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }) {
   return (
     <div>
@@ -233,11 +309,14 @@ function Field({
       >
         {label}
       </label>
+
       <input
         id={name}
         name={name}
         type={type}
         required={required}
+        value={value}
+        onChange={onChange}
         className="mt-2 w-full rounded-xl border border-[color:var(--border)] bg-white px-4 py-3 text-sm text-[color:var(--ink)] outline-none focus:border-[color:var(--royal-purple)]"
       />
     </div>
