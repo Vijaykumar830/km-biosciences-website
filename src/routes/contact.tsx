@@ -57,7 +57,7 @@ function ContactPage() {
           <Reveal>
             <div className="rounded-3xl bg-white p-8 shadow-elegant sm:p-10">
               <SectionHeading
-                eyebrow="Request a consultation"
+                eyebrow="Request a Call Back"
                 title={<>Tell us about your project</>}
               />
 
