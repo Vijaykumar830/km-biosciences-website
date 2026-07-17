@@ -19,7 +19,7 @@ export function Logo({ variant = "dark" }: { variant?: "dark" | "light" }) {
           KMBiosciences
         </div>
         <div
-          className={`text-[9px] font-medium uppercase tracking-[0.18em] ${
+          className={`text-[8px] font-medium uppercase tracking-[0.18em] ${
             variant === "light"
               ? "text-white/50"
               : "text-[color:var(--ink-soft)]"
