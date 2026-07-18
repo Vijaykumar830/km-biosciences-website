@@ -17,7 +17,10 @@ const variants: Variants = {
 };
 
 // Cache motion components per tag so we don't call motion() on every render.
-const motionTagCache = new Map<string, ReturnType<typeof motion.div extends never ? never : typeof motion>>();
+const motionTagCache = new Map<
+  string,
+  ReturnType<typeof motion.div extends never ? never : typeof motion>
+>();
 
 function getMotionTag(tag: keyof HTMLElementTagNameMap) {
   if (!motionTagCache.has(tag)) {

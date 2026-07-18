@@ -176,7 +176,7 @@ function RootComponent() {
           <Outlet />
         </main>
         <Footer />
-        <CookieBanner />
+        {/* <CookieBanner /> */}
       </div>
     </QueryClientProvider>
   );

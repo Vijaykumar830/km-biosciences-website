@@ -27,11 +27,13 @@ const LICENCES = [
     title: "MHRA MIA Licence",
     body: "Manufacturer/Importer Authorisation issued by the Medicines and Healthcare products Regulatory Agency (UK).",
     tag: "United Kingdom",
+    pdf: "/licences/MHRA-MIA-Licence.pdf",
   },
   {
     title: "HPRA MIA Licence",
     body: "Manufacturer/Importer Authorisation issued by the Health Products Regulatory Authority (Ireland).",
     tag: "Ireland",
+    pdf: "/licences/HPRA-MIA-Licence.pdf",
   },
 ];
 
@@ -119,12 +121,15 @@ function CompliancePage() {
                       {l.title}
                     </h3>
                     <p className="mt-3 text-[color:var(--ink-soft)]">{l.body}</p>
-                    <button
-                      type="button"
+                    <a
+                      href={l.pdf}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="mt-6 inline-flex items-center gap-2 rounded-full border border-[color:var(--border)] bg-white px-5 py-2.5 text-sm font-semibold text-[color:var(--ink)] shadow-soft transition-all hover:border-[color:var(--royal-purple)] hover:text-[color:var(--deep-purple)]"
                     >
-                      <Download className="h-4 w-4" /> Download preview
-                    </button>
+                      <Download className="h-4 w-4" />
+                      Download Preview
+                    </a>
                   </div>
                 </div>
               </Reveal>
