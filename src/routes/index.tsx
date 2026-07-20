@@ -16,6 +16,13 @@ export const Route = createFileRoute("/")({
         property: "og:title",
         content: "KM Biosciences — Pharmaceutical Quality & Regulatory Services (UK & Ireland)",
       },
+
+      {
+        name: "description",
+        content:
+          "MHRA & HPRA Authorised MIA Holder providing Qualified Person services, Regulatory Affairs, Importation, GMP, GDP and Quality Assurance across the UK and Europe.",
+      },
+
       { property: "og:url", content: "/" },
     ],
     links: [{ rel: "canonical", href: "/" }],

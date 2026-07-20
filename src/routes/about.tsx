@@ -29,7 +29,7 @@ export const Route = createFileRoute("/about")({
       {
         name: "description",
         content:
-          "Learn about KMBiosciences Limited — a pharmaceutical service provider with 20+ years of expertise, MHRA & HPRA authorised, delivering quality and regulatory services across the UK and EU.",
+          "Learn about KMBiosciences Limited — a pharmaceutical service provider with 20+ years of expertise, MHRA & HPRA authorised, delivering quality and regulatory services across the UK and Ireland.",
       },
       { property: "og:title", content: "About KMBiosciences Limited" },
       { property: "og:url", content: "/about" },
