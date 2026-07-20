@@ -110,14 +110,21 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "MHRA & HPRA authorised MIA Holder providing Qualified Person, Responsible Person, RPi, QA, eQMS (Scilife), Lead Auditor and Regulatory Support services across the UK & EU.",
       },
       {
-        property: "og:image",
+        name: "keywords",
         content:
-          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/e4c11c64-57a0-4903-be70-4c46ea224609/id-preview-85c549dc--e0eb269c-71a1-41ba-9b2a-5beb79300ea6.lovable.app-1784211280754.png",
+          "KMBiosciences, Pharmaceutical Regulatory Services, Pharmaceutical Quality Services, Qualified Person, QP Services, Qualified Person Services UK, Qualified Person EU, Contract Qualified Person, QP Batch Certification, Batch Release, MIA Holder, MHRA MIA Holder, HPRA MIA Holder, Manufacturer Importer Authorisation, Pharmaceutical Importation, Importation Services, Responsible Person, RP Services, Responsible Person Import, RPi Services, Regulatory Affairs, Regulatory Strategy, Regulatory Compliance, Pharmaceutical Compliance, GMP Compliance, GDP Compliance, Good Manufacturing Practice, Good Distribution Practice, Quality Assurance, QA Services, Pharmaceutical QA, Pharmaceutical Auditing, Lead Auditor, GMP Audit, GDP Audit, Internal Audit, Supplier Audit, Quality Management System, QMS, Electronic Quality Management System, eQMS, Scilife, Pharmaceutical Consulting, Pharmaceutical Service Provider, Pharmaceutical Support Services, Pharmaceutical Licensing, Pharmaceutical Quality Systems, Pharmaceutical Distribution, Pharmaceutical Import Export, EU Pharmaceutical Services, UK Pharmaceutical Services, Ireland Pharmaceutical Services, European Pharmaceutical Compliance, Pharmaceutical Industry, Life Sciences, Medicines Compliance, Drug Regulatory Services, Pharmaceutical Regulatory Experts",
+      },
+      {
+        property: "og:url",
+        content: "https://www.kmbios.com",
+      },
+      {
+        property: "og:image",
+        content: "https://www.kmbios.com/kmbfavicon.png",
       },
       {
         name: "twitter:image",
-        content:
-          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/e4c11c64-57a0-4903-be70-4c46ea224609/id-preview-85c549dc--e0eb269c-71a1-41ba-9b2a-5beb79300ea6.lovable.app-1784211280754.png",
+        content: "https://www.kmbios.com/kmbfavicon.png",
       },
     ],
     links: [
@@ -129,6 +136,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       //   rel: "stylesheet",
       //   href: "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap",
       // },
+      {
+        rel: "canonical",
+        href: "https://www.kmbios.com",
+      },
     ],
     scripts: [
       {
@@ -136,11 +147,23 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Organization",
+
           name: "KMBiosciences Limited",
-          url: "/",
+
+          url: "https://www.kmbios.com",
+
+          logo: "https://www.kmbiosciences.com/kmbfavicon.png",
+
+          email: "info@kmbios.com",
+
+          telephone: "+44 7880 111192",
+
           description:
-            "MHRA & HPRA authorised MIA Holder providing pharmaceutical quality, regulatory and compliance services across the UK and EU.",
-          areaServed: ["United Kingdom", "Ireland", "European Union"],
+            "MHRA & HPRA authorised MIA Holder providing pharmaceutical quality, regulatory and compliance services.",
+
+          areaServed: ["United Kingdom", "Ireland"],
+
+          sameAs: ["https://www.linkedin.com/company/km-biosciences/"],
         }),
       },
     ],
