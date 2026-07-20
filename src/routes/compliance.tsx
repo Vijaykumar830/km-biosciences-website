@@ -5,6 +5,7 @@ import { Reveal } from "@/components/site/Reveal";
 import { COMPLIANCE } from "@/lib/site";
 import { img } from "@/lib/images";
 
+
 export const Route = createFileRoute("/compliance")({
   component: CompliancePage,
   head: () => ({
@@ -28,12 +29,14 @@ const LICENCES = [
     body: "Manufacturer/Importer Authorisation issued by the Medicines and Healthcare products Regulatory Agency (UK).",
     tag: "United Kingdom",
     pdf: "/licences/MHRA-MIA-Licence.pdf",
+    logo: "/Certification/mhra.jpg",
   },
   {
     title: "HPRA MIA Licence",
     body: "Manufacturer/Importer Authorisation issued by the Health Products Regulatory Authority (Ireland).",
     tag: "Ireland",
     pdf: "/licences/HPRA-MIA-Licence.pdf",
+    logo: "/Certification/hpra.png",
   },
 ];
 
@@ -43,14 +46,15 @@ function CompliancePage() {
       <section className="relative isolate overflow-hidden pt-36 pb-20">
         <div className="absolute inset-0 -z-20 grad-hero" />
         <div className="container-x relative text-white">
-          <div className="max-w-3xl">
+          <div className="max-w-4xl">
             <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em]">
               <ShieldCheck className="h-3.5 w-3.5" /> Compliance
             </div>
             <h1 className="mt-5 font-display text-4xl font-semibold leading-tight sm:text-6xl">
-              Regulatory compliance is{" "}
+              Regulatory compliance is the
+              <br className="hidden sm:block" />
               <span className="bg-gradient-to-r from-white to-[color:var(--light-blue)] bg-clip-text text-transparent">
-                the foundation of everything we do
+                foundation of everything we do
               </span>
             </h1>
             <p className="mt-5 text-white/80">
@@ -65,21 +69,24 @@ function CompliancePage() {
         <div className="container-x">
           <SectionHeading
             center
-            eyebrow="Frameworks & Standards"
+            eyebrow="Authorisations & Standards"
             title={
               <>
                 Aligned with <span className="grad-text">the standards that matter</span>
               </>
             }
           />
-          <div className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-4 lg:grid-cols-8">
-            {COMPLIANCE.map((c, i) => (
-              <Reveal key={c} delay={i * 0.03}>
-                <div className="rounded-2xl border border-[color:var(--border)] bg-white p-5 text-center shadow-soft transition-transform hover:-translate-y-1">
-                  <div className="mx-auto grid h-10 w-10 place-items-center rounded-xl grad-button text-white">
-                    <ShieldCheck className="h-4 w-4" />
+          <div className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-3">
+            {COMPLIANCE.map((item, i) => (
+              <Reveal key={item.name} delay={i * 0.03}>
+                <div className="rounded-2xl border border-[color:var(--border)] bg-white p-6 text-center shadow-soft transition-transform hover:-translate-y-1">
+                  <div className="flex h-16 items-center justify-center">
+                    <img src={item.logo} alt={item.name} className="h-20 w-auto object-contain" />
                   </div>
-                  <div className="mt-3 text-sm font-semibold text-[color:var(--ink)]">{c}</div>
+
+                  <div className="mt-4 text-base font-semibold text-[color:var(--ink)]">
+                    {item.name}
+                  </div>
                 </div>
               </Reveal>
             ))}
@@ -117,9 +124,13 @@ function CompliancePage() {
                     </div>
                   </div>
                   <div className="p-7">
-                    <h3 className="font-display text-2xl font-semibold text-[color:var(--ink)]">
-                      {l.title}
-                    </h3>
+                    <div className="flex items-center gap-4">
+                      <img src={l.logo} alt={l.title} className="h-14 w-auto object-contain" />
+
+                      <h3 className="font-display text-2xl font-semibold text-[color:var(--ink)]">
+                        {l.title}
+                      </h3>
+                    </div>
                     <p className="mt-3 text-[color:var(--ink-soft)]">{l.body}</p>
                     <a
                       href={l.pdf}
@@ -143,13 +154,13 @@ function CompliancePage() {
           <div className="rounded-[2rem] grad-brand p-10 text-white shadow-elegant sm:p-14">
             <div className="flex flex-col items-start gap-6 lg:flex-row lg:items-center lg:justify-between">
               <h2 className="max-w-2xl font-display text-3xl font-semibold sm:text-4xl">
-                Preparing for your next MHRA or HPRA inspection?
+                Planning to new product introduction into UK and EU?
               </h2>
               <Link
                 to="/contact"
                 className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-[color:var(--deep-purple)] shadow-elegant hover:-translate-y-0.5"
               >
-                Request inspection support <ArrowRight className="h-4 w-4" />
+                Request MIA support <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
           </div>

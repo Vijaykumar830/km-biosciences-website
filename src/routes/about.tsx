@@ -250,6 +250,7 @@ function AboutPage() {
                 country: "United Kingdom",
                 role: "39 Northumberland Crescent, Feltham, London TW149SY",
                 img: "office",
+                authorisation: "MHRA Authorised MIA Holder",
               },
               {
                 flag: "🇮🇪",
@@ -257,6 +258,7 @@ function AboutPage() {
                 country: "Ireland",
                 role: "2 Station Road, Ballincollig, Co. Cork, P31C799",
                 img: "office",
+                authorisation: "HPRA Authorised MIA Holder",
               },
             ].map((o, i) => (
               <Reveal key={o.country} delay={i * 0.08}>
@@ -280,7 +282,7 @@ function AboutPage() {
                       </div>
                     </div>
                     <div className="mt-5 flex items-center gap-2 text-sm text-[color:var(--ink-soft)]">
-                      <Building2 className="h-4 w-4" /> MHRA & HPRA Authorised MIA Holder
+                      <Building2 className="h-4 w-4" /> {o.authorisation}
                     </div>
                   </div>
                 </div>

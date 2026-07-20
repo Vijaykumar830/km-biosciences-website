@@ -30,6 +30,9 @@ import {
   Workflow,
 } from "lucide-react";
 
+
+
+
 export const NAV = [
   { label: "Home", to: "/" },
   { label: "About", to: "/about" },
@@ -57,7 +60,7 @@ export const SERVICES = [
   },
   {
     slug: "qualified-person",
-    title: "Qualified Person (QP)",
+    title: "Qualified Person",
     short: "Contract QP oversight, batch certification and release across the UK and EU.",
     icon: BadgeCheck,
     image: "qp-batch",
@@ -73,7 +76,7 @@ export const SERVICES = [
   },
   {
     slug: "responsible-person",
-    title: "Responsible Person (RP)",
+    title: "Responsible Person",
     short: "Named RP services with full GDP oversight for wholesale distribution.",
     icon: ShieldCheck,
     image: "rp-warehouse",
@@ -88,7 +91,7 @@ export const SERVICES = [
   },
   {
     slug: "rpi",
-    title: "Responsible Person for Import (RPi)",
+    title: "Responsible Person for Import",
     short: "Dedicated RPi services supporting compliant importation into the UK.",
     icon: Package,
     image: "rpi-import",
@@ -173,7 +176,6 @@ export const INDUSTRIES = [
   { title: "Virtual Pharmaceutical Companies", icon: LayoutDashboard, image: "eqms" },
   { title: "Wholesale Distributors", icon: Warehouse, image: "rp-warehouse" },
   { title: "Start-up Pharmaceutical Companies", icon: Sparkles, image: "hero-lab" },
-  { title: "Contract Manufacturing Organisations", icon: FlaskConical, image: "manufacturing" },
 ] as const;
 
 export const WHY = [
@@ -215,27 +217,65 @@ export const PROCESS = [
 ] as const;
 
 export const SUBCONTRACTORS = [
-  { title: "Approved Contract Warehouses", icon: Warehouse, image: "rp-warehouse" },
-  { title: "Approved Testing Laboratories", icon: Beaker, image: "testing-lab" },
-  { title: "Chemical Testing", icon: FlaskConical, image: "testing-lab" },
-  { title: "Physical Testing", icon: Gauge, image: "testing-lab" },
-  { title: "Microbiological Testing", icon: Microscope, image: "testing-lab" },
-  { title: "Active Microbiological Testing (AMT)", icon: Recycle, image: "testing-lab" },
-  { title: "Analytical Method Validation (AMV)", icon: LibraryBig, image: "eqms" },
-  { title: "Temperature Controlled Logistics", icon: Snowflake, image: "coldchain" },
-  { title: "Qualified Transportation Providers", icon: Truck, image: "coldchain" },
+  {
+    title: "Approved Contract Warehouses",
+    icon: Warehouse,
+    image: "rp-warehouse",
+    services: [
+      "GDP-compliant storage facilities",
+      "Temperature-controlled storage (Ambient, Cold Chain & Frozen)",
+      "GMP/GDP-compliant sampling services",
+      "Quarantine and released goods management",
+      "Inventory management and stock control",
+      "Returns, recalls & destruction services",
+      "Secure storage & distribution",
+    ],
+  },
+  {
+    title: "Approved Testing Laboratories",
+    icon: Beaker,
+    image: "testing-lab",
+    services: [
+      "GMP-compliant analytical laboratories",
+      "Physicochemical testing",
+      "Microbiological testing",
+      "Analytical Method Validation (AMV)",
+      "Analytical Method Transfer (AMT)",
+      "Batch release testing",
+      "Expedited testing services",
+      "OOS/OOT investigation support",
+    ],
+  },
+  {
+    title: "Qualified Transportation Providers",
+    icon: Truck,
+    image: "coldchain",
+    services: [
+      "GDP-compliant transportation",
+      "Temperature-controlled logistics",
+      "Cold chain management",
+      "UK & international pharmaceutical distribution",
+      "Real-time temperature monitoring",
+      "Validated shipping solutions",
+      "End-to-end shipment tracking",
+    ],
+  },
 ] as const;
 
 export const COMPLIANCE = [
-  "MHRA",
-  "HPRA",
-  "UK GMP",
-  "EU GMP",
-  "GDP",
-  "ICH Guidelines",
-  "Annex 16",
-  "Annex 21",
-] as const;
+  {
+    name: "MHRA",
+    logo: "/Certification/mhra.jpg",
+  },
+  {
+    name: "HPRA",
+    logo: "/Certification/hpra.png",
+  },
+  {
+    name: "ICH Guidelines",
+    logo: "/Certification/ich.png",
+  },
+];
 
 export const STATS = [
   { value: 20, suffix: "+", label: "Years of pharmaceutical expertise" },

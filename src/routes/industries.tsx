@@ -94,30 +94,48 @@ function IndustriesPage() {
             }
             intro="KMB works with carefully selected and qualified subcontractors to support specialised services. These services are delivered through an approved subcontractor network where applicable."
           />
-          <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-14 grid gap-8 lg:grid-cols-3">
             {SUBCONTRACTORS.map((s, i) => (
-              <Reveal key={s.title} delay={i * 0.04}>
-                <div className="flex h-full items-start gap-4 rounded-3xl border border-[color:var(--border)] bg-white p-6 shadow-soft transition-all hover:-translate-y-1">
-                  <div className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl grad-button text-white shadow-soft">
-                    <s.icon className="h-5 w-5" />
-                  </div>
-                  <div className="min-w-0">
-                    <div className="font-semibold text-[color:var(--ink)]">{s.title}</div>
-                    <div className="mt-1 text-sm text-[color:var(--ink-soft)]">
-                      Coordinated by KMB via approved partners.
+              <Reveal key={s.title} delay={i * 0.05}>
+                <div className="overflow-hidden rounded-3xl bg-white shadow-card transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+                  <img src={img(s.image)} alt={s.title} className="h-56 w-full object-cover" />
+
+                  <div className="p-7">
+                    <div className="mb-5 flex items-center gap-4">
+                      <div className="grid h-12 w-12 place-items-center rounded-2xl grad-button text-white">
+                        <s.icon className="h-6 w-6" />
+                      </div>
+
+                      <h3 className="text-xl font-semibold text-[color:var(--ink)]">{s.title}</h3>
+                    </div>
+
+                    <ul className="space-y-3">
+                      {s.services.map((service) => (
+                        <li
+                          key={service}
+                          className="flex items-start gap-3 text-sm text-[color:var(--ink-soft)]"
+                        >
+                          <span className="mt-1 h-2 w-2 rounded-full bg-[color:var(--royal-purple)]"></span>
+                          <span>{service}</span>
+                        </li>
+                      ))}
+                    </ul>
+
+                    <div className="mt-6 rounded-xl bg-[color:var(--surface)] p-4 text-sm font-medium text-[color:var(--deep-purple)]">
+                      ✓ Coordinated by KMB through approved partner network
                     </div>
                   </div>
                 </div>
               </Reveal>
             ))}
           </div>
-
+          {/* 
           <Reveal delay={0.1}>
             <p className="mx-auto mt-10 max-w-2xl rounded-2xl border border-[color:var(--border)] bg-white p-5 text-center text-sm text-[color:var(--ink-soft)]">
               KMB coordinates these services through approved subcontractors and partners. KMB does
               not own testing laboratories or warehouses.
             </p>
-          </Reveal>
+          </Reveal> */}
         </div>
       </section>
       <section className="relative isolate overflow-hidden py-24">

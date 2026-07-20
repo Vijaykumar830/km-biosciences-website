@@ -44,8 +44,8 @@ function ServicesPage() {
               </span>
             </h1>
             <p className="mt-5 text-white/80">
-              Importation, Qualified Person (QP), Responsible Person (RP), Responsible Person for
-              Import (RPi), Quality Assurance, Quality Management Systems (eQMS · Scilife), Lead
+              Importation, Qualified Person, Responsible Person, Responsible Person for
+              Import, Quality Assurance, Quality Management Systems, Lead
               Auditor and Regulatory Support.
             </p>
           </div>

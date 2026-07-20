@@ -40,7 +40,7 @@ export function ServiceCard({
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[color:var(--deep-purple)]/40 via-transparent to-transparent" />
           <div className="absolute left-5 top-5 inline-flex items-center gap-2 rounded-full bg-white/85 px-3 py-1.5 text-xs font-semibold text-[color:var(--deep-purple)] shadow-soft">
-            <Icon className="h-3.5 w-3.5" /> KMB Service
+            <Icon className="h-3.5 w-3.5" />
           </div>
         </div>
       </div>

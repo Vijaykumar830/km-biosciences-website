@@ -29,7 +29,7 @@ export function LogoMarquee({ items, speed = 40 }: { items: LogoItem[]; speed?: 
               src={item.src}
               alt={item.name}
               loading="lazy"
-              className="max-h-16 w-auto object-contain"
+              className="max-h-21 w-auto object-contain"
             />
           </div>
         ))}

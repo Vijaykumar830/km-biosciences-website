@@ -28,7 +28,7 @@ function HomePage() {
       <Hero />
 
       {/* Trust bar */}
-      <section className="border-b border-[color:var(--border)] bg-white py-10">
+      {/* <section className="border-b border-[color:var(--border)] bg-white py-10">
         <div className="container-x">
           <Reveal>
             <p className="text-center text-xs font-semibold uppercase tracking-[0.22em] text-[color:var(--ink-soft)]">
@@ -45,7 +45,7 @@ function HomePage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* About preview */}
       <section className="relative overflow-hidden py-24 sm:py-32">
